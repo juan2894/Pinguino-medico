@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Formulario</title>
+  <link href="/css/style2.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <figure>
+        <img src="./imagenes/arrow-left.png" class="flecha"> </figure>
+     <h1 class="titulo">Historia Clínica</h1>
+      <figure>
+        <img src="./imagenes/pinguino-medico.svg"  class="logo">
+      </figure>
+    </header>
+
+    <main>
+      <section class="principales">
+    <h1 class="titulo2">Datos del paciente</h1>
+    <form action="" class="datos1">
+      <label for="nombre-paciente" class="nombre">
+      <span> Nombre del paciente: </span>
+      <input type="text"
+    placeholder="Juan Carlos Bodoque">
+    </label>
+    <label for="documento-identidad"  class="identidad">
+      <span> Documento de identidad:</span>
+      <input type="number" 
+    placeholder="90954346">
+    </label>
+    <label for="edad" class="edad">
+      <span>Edad:</span >
+      <input type="number"
+    placeholder="43 años">
+    </label> 
+
+     <label for="sintoma" class="sintoma1">
+      <span>Síntoma principal:</span>
+      <select name="síntomas" id="" class="v-sintomas">
+     <option value="1">Fiebre</option>
+      <option value="2">Dolor abdominal</option>
+     <option value="3">Cefalea</option>
+     <option value="4">Dolor toráxico</option>
+      <option value="5">Síncope o colapso</option>
+      <option value="6">Síntomas constitucionales</option>
+     <option value="7">Polidipsia</option>
+     <option value="8">Polifagia</option>
+         <option value="9">Diuresis</option>
+     <option value="10">Deposiciones no habituales </option>
+     <option value="11">Hospitalizaciones recientes</option>
+        </select>
+    </label>
+    <label for="antiguedad" class="antiguedad">
+      <span>Antigüedad de sintomatología:</span>
+      <input type="text"
+    placeholder="una semana">
+    </label>
+    </form>
+    </section>
+
+
+      <section class="section2">
+        <h1 class="otros">Otros sìntomas</h1>
+      <form action="" class="sintomas-otros">
+     <label for="Fiebre1" class="otros-sintomas">
+      <span>Fiebre</span>
+      <input type="checkbox">
+     </label>
+      <label for="Dolor-abdominal1">
+      <span>Dolor abdominal</span>
+      <input type="checkbox">
+      </label>
+      <label for="Cefalea1">
+      <span>Cefalea</span>
+      <input type="checkbox"> 
+      </label>
+      <label for="Dolor-toráxico1">
+      <span>Dolor toráxico</span>
+      <input type="checkbox"> 
+      </label>
+      <label for="Síntomas-constitucionales1">
+      <span>Sìntomas constitucionales</span>
+      <input type="checkbox">
+      </label>
+        <label for=Polidipsia1">
+      <span>Polidipsia</span>
+        <input type="checkbox"> 
+        </label>
+      <label for="Polifagia1">
+      <span>Polifagia</span>
+      <input type="checkbox">
+      </label>
+      <label for="Diuresis1">
+      <span>Diuresis</span>
+      <input type="checkbox">
+      </label>
+        <label for="Deposicionesno-habituales1">
+      <span>Deposiciones de caracterìsticas no habituales</span>
+      <input type="checkbox">
+        </label>
+    <label for="Hospitalizaciones-recientes1">
+      <span>Hospitalizaciones recientes</span>
+      <input type="checkbox">
+    </label>
+      </form>
+    </section>
+
+    <section>
+    <h1 class="antecedentes">Antecedentes</h1>
+    <form action="" class="antecedentes2">
+    <label for="Patológicos">
+      <span>Patológicos</span>
+      <input type="checkbox" class="patologicos">
+    </label>
+    <label for="tóxicos">
+      <span>Tóxicos</span>
+     <input type="checkbox" class="toxicos">
+    </label>
+      <label for="familiares">
+      <span>Familiares</span>
+        <input type="checkbox" class="familiares">
+      </label>
+    <label for="Quirúrgicos">
+      <span>Quirúrgicos</span> 
+      <input type="checkbox" class="quirurgicos">
+    </label>
+    <label for="Alérgicos">
+      <span>Alérgicos</span> 
+      <input type="checkbox" class="alergicos">
+    </label>
+    <label for="Revisión-sistemas">
+      <span>Revisión por sistemas</span> 
+    <input type="checkbox" class="revision">
+    </label>
+    <label for="Farmacológicos">
+      <span>Farmacológicoss</span> 
+      <input type="checkbox" class="farmacologicos">
+    </label>
+    <label for="Ginecologicos">
+      <span>Ginecológicos</span> 
+    <input type="checkbox" class="ginecologicos">
+    </label>
+    </form>
+    </section>
+
+    <section>
+      <h1 class="signos">Signos vitales</h1>
+    <form action="" class="signos-vitales">
+    <label for="Frecuencia-cardiaca">
+      <span>FA</span> 
+      <input type="number" placeholder="75" class="FA">
+    </label>
+     <label for="tensión-arterial">
+      <span>TA</span> 
+      <input type="text" placeholder="120/80" class="TA">
+     </label>
+      <label for="Frecuencia-respiratoria">
+      <span>FR</span> 
+      <input type="number" placeholder="18" class="FR">
+      </label>
+      <label for="PO2">
+      <span>PO2</span> 
+      <input type="number" placeholder="94" class="PO2">
+      </label>
+        <label for="Temperatura">
+      <span>T°</span> 
+      <input type="number" placeholder="36" class="tem">
+        </label>
+    </form>
+    </section>
+
+    <section>
+      <h1 class="examen">Exámen físico</h1>
+     <p>Marque la casilla solamente si el paciente NO cumple con la condición de cada uno de los items</p>
+      <form action="" class="examen-fisico">
+      <label for="normocéfalo">
+      <span>Normocéfalo</span> 
+      <input type="checkbox">
+      </label>
+      <label for="pupilas-isocóricas">
+      <span>Pupilas isocóricas</span> 
+      <input type="checkbox">
+      </label>
+      <label for="escleras-anictéricas">
+      <span>Escleras anictéricas</span> 
+      <input type="checkbox">
+      </label>
+      <label for="oftalmoscopia-normal">
+      <span>Oftalmoscopia sin alteración</span> 
+      <input type="checkbox">
+      </label>
+      <label for="otoscopia-normal">
+      <span>Otoscopia normal</span> 
+      <input type="checkbox">
+      </label>
+      <label for="Rinoscopia normal">
+      <span>Rinoscopia normal</span> 
+      <input type="checkbox">
+      </label>
+      <label for="mucosa-oral">
+      <span>Mucosa oral húmeda</span> 
+      <input type="checkbox">
+      </label>
+      <label for="cuello-movil">
+      <span>Cuello móvil sin dolor, 
+masas no adenamagalias</span> 
+      <input type="checkbox">
+      </label>
+    <label for="ruidos-respiratorios">
+      <span>Ruidos respiratorios 
+murmullo vesicular conservado</span> 
+      <input type="checkbox">
+    </label>
+    <label for="tórax-simétrico">
+      <span>Tórax simétrico, adecuada 
+expansión sin retracciones</span> 
+      <input type="checkbox">
+    </label>
+    </form>
+    </section>
+
+    <section>
+      <p>Marque la casilla solamente si el paciente NO cumple con la condición de cada uno de los items</p>
+    <form action="" class="examen-2">
+    <label for="Abdomen">
+      <span>Abdomen: blando, no doloroso, sin masas ni irritación,
+ peritoneal. Ruidos normales</span> 
+      <input type="checkbox">
+    </label>
+    <label for="Piel">
+      <span>Piel y fanelas: normal</span>
+      <input type="checkbox">
+    </label>
+     <label for="Extremidades">
+      <span>Extremidades:simétricas, sin edemas, disteles presentes </span> 
+      <input type="checkbox">
+     </label>
+      <label for="Neurológico">
+      <span>Neurológico: Sin deficit aparente ubicado en las dos esferas </span> 
+      <input type="checkbox">
+      </label>
+    </form>
+    </section>
+
+      <section class="boton">
+    <button onclick="window.location.href='tercero.html'"class="generar">Generar</button>
+      </section>
+    </main>
+    <script src="script.js"></script>
+    </body>
+</html>
