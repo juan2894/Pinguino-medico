@@ -1,21 +1,25 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
+
   <head>
     <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Formulario</title>
-  <link href="/css/style2.css" rel="stylesheet" type="text/css" />
+  <link href="segundo.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <header>
       <figure>
-        <img src="./imagenes/arrow-left.png" class="flecha"> </figure>
+        <a href="index.html">
+        <img src="./imagenes/arrow-left.png" class="flecha">
+        </a>
+      </figure>
      <h1 class="titulo">Historia Clínica</h1>
       <figure>
         <img src="./imagenes/pinguino-medico.svg"  class="logo">
       </figure>
     </header>
-
+  
     <main>
       <section class="principales">
     <h1 class="titulo2">Datos del paciente</h1>
@@ -23,7 +27,7 @@
       <label for="nombre-paciente" class="nombre">
       <span> Nombre del paciente: </span>
       <input type="text"
-    placeholder="Juan Carlos Bodoque">
+    placeholder="Juan Carlos Rodríguez">
     </label>
     <label for="documento-identidad"  class="identidad">
       <span> Documento de identidad:</span>
@@ -32,10 +36,10 @@
     </label>
     <label for="edad" class="edad">
       <span>Edad:</span >
-      <input type="number"
+      <input type="text"
     placeholder="43 años">
     </label> 
-
+      
      <label for="sintoma" class="sintoma1">
       <span>Síntoma principal:</span>
       <select name="síntomas" id="" class="v-sintomas">
@@ -60,7 +64,7 @@
     </form>
     </section>
 
-
+    
       <section class="section2">
         <h1 class="otros">Otros sìntomas</h1>
       <form action="" class="sintomas-otros">
@@ -106,7 +110,7 @@
     </label>
       </form>
     </section>
-
+      
     <section>
     <h1 class="antecedentes">Antecedentes</h1>
     <form action="" class="antecedentes2">
@@ -144,7 +148,7 @@
     </label>
     </form>
     </section>
-
+      
     <section>
       <h1 class="signos">Signos vitales</h1>
     <form action="" class="signos-vitales">
@@ -170,7 +174,7 @@
         </label>
     </form>
     </section>
-
+          
     <section>
       <h1 class="examen">Exámen físico</h1>
      <p>Marque la casilla solamente si el paciente NO cumple con la condición de cada uno de los items</p>
@@ -220,7 +224,7 @@ expansión sin retracciones</span>
     </label>
     </form>
     </section>
-
+      
     <section>
       <p>Marque la casilla solamente si el paciente NO cumple con la condición de cada uno de los items</p>
     <form action="" class="examen-2">
@@ -243,7 +247,7 @@ expansión sin retracciones</span>
       </label>
     </form>
     </section>
-
+        
       <section class="boton">
     <button onclick="window.location.href='tercero.html'"class="generar">Generar</button>
       </section>
