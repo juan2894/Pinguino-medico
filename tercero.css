@@ -1,0 +1,81 @@
+* {
+  background-color: white;
+  box-sizing: border-box;
+}
+.logopi {
+  width: 260.4px;
+  height: 149px;
+margin-left: 920px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+section {
+  margin-left: 15px;
+}
+ div {
+   display: flex;
+   flex-direction: row;
+   margin-top: 55px;
+   margin-bottom: -15px;
+ }
+p {
+  margin-right: 500px;
+  margin-bottom: -30px;
+}
+img {
+  width: 19px;
+  height: 23.75px;
+}
+input {
+  background-color: #E6F6FF;
+}
+.enfermedadac {
+  width: 1198px;
+  height: 66px;
+}
+.antecedentesfam {
+  width: 1198px;
+  height: 96px;
+}
+.examenfis {
+  width: 1198px;
+  height: 394px;
+}
+.plan {
+  width: 1198px;
+  height: 86px;
+}
+.icono1 { 
+margin-left: 550px;
+}
+.icono2 {
+  margin-left: 518px;
+}
+.icono3 {
+  margin-left: 580px;
+}
+.icono4 {
+  margin-left: 645px;
+}
+.finali {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 50px;}
+.final {
+  width: 159px;
+  height: 50px;
+   background-color: #8CCDF1;
+  color: black;
+  margin-left: 40PX;
+  margin-top: 40px;
+}
+.final:hover {
+  background-color: black;
+  color: #8CCDF1;
+  cursor: pointer;
+}
+.final:active {
+   background-color: #F333;
+  color: white;
+}

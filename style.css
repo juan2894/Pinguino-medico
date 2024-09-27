@@ -1,0 +1,47 @@
+* {
+  background-color: #8CCDF1;
+  box-sizing: border-box;
+}
+.logo {
+  width: 402px;
+  height: 231px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+.texto1 {
+  font-size: 48px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+.botones {
+   margin: 0 auto;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+.registro,
+.historia {
+   width: 159px;
+  height: 50px;
+  background-color: black;
+  color: #F1E60E;
+  margin-left: 40px;
+}
+.registro:hover,
+.historia:hover {
+   background-color: #F1E60E;
+  color: black;
+  cursor: pointer; 
+}
+.registro:active,
+.historia:active {
+  background-color: #F333;
+  color: white;
+}
+
