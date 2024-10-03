@@ -1,10 +1,10 @@
 function guardarDatos() {
-    // Obtener los valores de los campos del formulario
-    const nombrePaciente = document.querySelector('input[placeholder="Juan Carlos Rodríguez"]').value;
-    const documentoIdentidad = document.querySelector('input[placeholder="90954346"]').value;
-    const edad = document.querySelector('input[placeholder="43 años"]').value;
-    const sintomaPrincipal = document.querySelector('.v-sintomas').value;
-    const antiguedadSintomas = document.querySelector('input[placeholder="una semana"]').value;
+    // Obtener los valores de los campos del formulario usando el atributo id
+    const nombrePaciente = document.getElementById('nombrePaciente').value;
+    const documentoIdentidad = document.getElementById('documentoIdentidad').value;
+    const edad = document.getElementById('edad').value;
+    const sintomaPrincipal = document.getElementById('sintomaPrincipal').value;
+    const antiguedadSintomas = document.getElementById('antiguedadSintomas').value;
 
     // Guardar los datos en localStorage para acceder desde la otra página
     localStorage.setItem('nombrePaciente', nombrePaciente);
