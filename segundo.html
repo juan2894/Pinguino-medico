@@ -1,12 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
-  <head>
+<head>
     <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Formulario</title>
-  <link href="segundo.css" rel="stylesheet" type="text/css" />
-  </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+
+    <!-- Optimización del título y del meta charset -->
+    <meta name="description" content="Formulario de historia clínica">
+    <meta name="keywords" content="historia clínica, formulario, paciente">
+    <meta name="author" content="Industrias Animadas">
+
+    <!-- Mejorar el rendimiento con la etiqueta rel para evitar bloqueos de renderizado -->
+    <link rel="stylesheet" href="segundo.css">
+
+    <!-- Asegurarnos de que el script no bloquee la carga de la página -->
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <figure>
+            <a href="index.html">
+                <img src="./imagenes/arrow-left.png" class="flecha" alt="Regresar">
+            </a>
+        </figure>
+        <h1 class="titulo">Historia Clínica</h1>
+        <figure>
+            <img src="./imagenes/pinguino-medico.svg" class="logo" alt="Logo Médico">
+        </figure>
+    </header>
+
+    <main>
+        <section class="principales">
+            <h1 class="titulo2">Datos del paciente</h1>
+            <form id="formDatosPaciente" class="datos1" onsubmit="return guardarDatosPaciente()">
+                <label for="nombrePaciente" class="nombre">
+                    <span> Nombre del paciente: </span>
+                    <input type="text" id="nombrePaciente" name="nombrePaciente" placeholder="Juan Carlos Rodríguez" required>
+                </label>
+                <!-- Continuar con otros campos según sea necesario -->
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
+
   <body>
     <header>
       <figure>
