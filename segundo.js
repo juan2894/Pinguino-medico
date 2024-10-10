@@ -1,18 +1,38 @@
-function guardarDatos() {
-    // Obtener los valores de los campos del formulario
-    const nombrePaciente = document.querySelector('input[placeholder="Juan Carlos Rodríguez"]').value;
-    const documentoIdentidad = document.querySelector('input[placeholder="90954346"]').value;
-    const edad = document.querySelector('input[placeholder="43 años"]').value;
-    const sintomaPrincipal = document.querySelector('.v-sintomas').value;
-    const antiguedadSintomas = document.querySelector('input[placeholder="una semana"]').value;
+document.addEventListener('DOMContentLoaded', () => {
+    const formDatosPaciente = document.getElementById('formDatosPaciente');
 
-    // Guardar los datos en localStorage para acceder desde la otra página
-    localStorage.setItem('nombrePaciente', nombrePaciente);
-    localStorage.setItem('documentoIdentidad', documentoIdentidad);
-    localStorage.setItem('edad', edad);
-    localStorage.setItem('sintomaPrincipal', sintomaPrincipal);
-    localStorage.setItem('antiguedadSintomas', antiguedadSintomas);
+    formDatosPaciente.addEventListener('submit', (event) => {
+        event.preventDefault(); // Evita el envío automático del formulario
 
-    // Redirigir a la página donde se mostrarán los datos
-    window.location.href = 'tercero.html';
+        // Obtener valores del formulario utilizando un solo bloque de código
+        const campos = {
+            nombrePaciente: document.getElementById('nombrePaciente').value.trim(),
+            documentoIdentidad: document.getElementById('documentoIdentidad').value.trim(),
+            edad: document.getElementById('edad').value.trim(),
+            sintomaPrincipal: document.getElementById('sintomaPrincipal').value,
+            antiguedadSintomas: document.getElementById('antiguedadSintomas').value.trim()
+        };
+
+        // Validaciones básicas en un solo ciclo
+        for (let campo in campos) {
+            if (!campos[campo] || (campo === 'documentoIdentidad' && isNaN(campos[campo])) || (campo === 'edad' && isNaN(campos[campo]))) {
+                alert(`Por favor, ingrese un valor válido para ${campo.replace(/([A-Z])/g, ' $1').toLowerCase()}.`);
+                return;
+            }
+        }
+
+        // Guardar los datos en localStorage para acceder desde la otra página
+        Object.entries(campos).forEach(([key, value]) => localStorage.setItem(key, value));
+
+        // Mostrar mensaje de éxito
+        alert('Datos del paciente guardados con éxito');
+        
+        // Limpiar el formulario
+        formDatosPaciente.reset();
+        
+        // Redirigir a otra página
+        window.location.href = 'tercero.html';
+    });
+});
+
 }
