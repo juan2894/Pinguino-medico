@@ -1,5 +1,155 @@
 <!DOCTYPE html>
 <html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia Clínica - Formulario de Paciente</title>
+    <link rel="stylesheet" href="segundo.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" aria-label="Volver a la página anterior">
+                <img src="./imagenes/arrow-left.png" class="flecha" alt="Flecha regresar" width="33" height="25">
+            </a>
+        </nav>
+        <h1 class="titulo">Historia Clínica</h1>
+        <img src="./imagenes/pinguino-medico.svg" class="logo" alt="Logo Médico" width="282" height="161">
+    </header>
+
+    <main>
+        <form id="formDatosPaciente" class="form-historia-clinica">
+            <section class="datos-paciente">
+                <h2 class="titulo2">Datos del paciente</h2>
+                
+                <div class="datos1">
+                    <div class="campo-form">
+                        <label for="nombrePaciente">Nombre del paciente:</label>
+                        <input type="text" id="nombrePaciente" name="nombrePaciente" required>
+                    </div>
+
+                    <div class="campo-form">
+                        <label for="documentoIdentidad">Documento de identidad:</label>
+                        <input type="text" id="documentoIdentidad" name="documentoIdentidad" pattern="\d{8,12}" required>
+                    </div>
+
+                    <div class="campo-form">
+                        <label for="edad">Edad:</label>
+                        <input type="number" id="edad" name="edad" min="0" max="150" required>
+                    </div>
+
+                    <div class="campo-form">
+                        <label for="sintomaPrincipal">Síntoma principal:</label>
+                        <select id="sintomaPrincipal" name="sintomaPrincipal" class="v-sintomas" required>
+                            <option value="">Seleccione un síntoma</option>
+                            <option value="Fiebre">Fiebre</option>
+                            <option value="Dolor abdominal">Dolor abdominal</option>
+                            <option value="Cefalea">Cefalea</option>
+                            <option value="Dolor toráxico">Dolor torácico</option>
+                            <option value="Síncope">Síncope o colapso</option>
+                        </select>
+                    </div>
+
+                    <div class="campo-form">
+                        <label for="antiguedadSintomas">Antigüedad de sintomatología:</label>
+                        <input type="text" id="antiguedadSintomas" name="antiguedadSintomas" required>
+                    </div>
+                </div>
+            </section>
+
+            <section class="otros-sintomas">
+                <h2 class="otros">Otros síntomas</h2>
+                <div class="sintomas-otros">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="fiebre" name="otrosSintomas" value="Fiebre">
+                        <label for="fiebre">Fiebre</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="dolorAbdominal" name="otrosSintomas" value="Dolor abdominal">
+                        <label for="dolorAbdominal">Dolor abdominal</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="cefalea" name="otrosSintomas" value="Cefalea">
+                        <label for="cefalea">Cefalea</label>
+                    </div>
+                    <!-- Agregar más síntomas según sea necesario -->
+                </div>
+            </section>
+
+            <section class="antecedentes-section">
+                <h2 class="antecedentes">Antecedentes</h2>
+                <div class="antecedentes2">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="patologicos" name="antecedentes" value="Patológicos">
+                        <label for="patologicos">Patológicos</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="toxicos" name="antecedentes" value="Tóxicos">
+                        <label for="toxicos">Tóxicos</label>
+                    </div>
+                    <!-- Agregar más antecedentes según sea necesario -->
+                </div>
+            </section>
+
+            <section class="signos-vitales-section">
+                <h2 class="signos">Signos vitales</h2>
+                <div class="signos-vitales">
+                    <div class="campo-form">
+                        <label for="FA">FA:</label>
+                        <input type="number" id="FA" name="FA" class="FA" min="0">
+                        <span>lat/min</span>
+                    </div>
+                    <div class="campo-form">
+                        <label for="TA">TA:</label>
+                        <input type="text" id="TA" name="TA" class="TA">
+                        <span>mmHg</span>
+                    </div>
+                    <div class="campo-form">
+                        <label for="FR">FR:</label>
+                        <input type="number" id="FR" name="FR" class="FR" min="0">
+                        <span>resp/min</span>
+                    </div>
+                    <div class="campo-form">
+                        <label for="PO2">PO2:</label>
+                        <input type="number" id="PO2" name="PO2" class="PO2" min="0">
+                        <span>%</span>
+                    </div>
+                    <div class="campo-form">
+                        <label for="temperatura">T°:</label>
+                        <input type="number" id="temperatura" name="temperatura" class="tem" step="0.1" min="35" max="42">
+                        <span>°C</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="examen-fisico-section">
+                <h2 class="examen">Examen físico</h2>
+                <p class="instrucciones">Marque la casilla solamente si el paciente NO cumple con la condición de cada uno de los ítems</p>
+                <div class="examen-fisico">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="normocefalo" name="examenFisico" value="Normocéfalo">
+                        <label for="normocefalo">Normocéfalo</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="pupilas" name="examenFisico" value="Pupilas isocóricas">
+                        <label for="pupilas">Pupilas isocóricas</label>
+                    </div>
+                    <!-- Agregar más ítems del examen físico según sea necesario -->
+                </div>
+            </section>
+
+            <div class="boton">
+                <button type="submit" class="generar">Generar historia clínica</button>
+            </div>
+        </form>
+    </main>
+
+    <script src="segundo.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
