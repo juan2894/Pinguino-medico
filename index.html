@@ -1,29 +1,27 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>pinguino-medico</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pingüino Médico</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <main>
-    <section class="logo">
-      <figure >
-        <img src="./imagenes/pinguino-medico.svg">
-      </figure>
-     </section>
-    <section class="texto1">
-      <p >Tus historias clínicas en tiempo record</p>
-      </section>
-      <section class="botones">
-    <button onclick="window.location.href='segundo.html'" class="registro" >Nuevo registro</button>
-    <button class="historia">Historia clínica</button>
-    </section>
-  </main>
-  <script src="script.js"></script>
+    <header>
+        <figure class="logo">
+            <img src="./imagenes/pinguino-medico.svg" alt="Logo de Pingüino Médico">
+            <figcaption class="visually-hidden">Logo de Pingüino Médico</figcaption>
+        </figure>
+    </header>
+    <main>
+        <section class="texto1">
+            <h1>Tus historias clínicas en tiempo record</h1>
+        </section>
+        <section class="botones">
+            <a href="segundo.html" class="registro btn">Nuevo registro</a>
+            <button type="button" class="historia btn">Historia clínica</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
 </body>
-
 </html>
