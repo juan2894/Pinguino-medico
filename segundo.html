@@ -62,9 +62,12 @@
   
     <main>
       <section class="principales">
-    <h1 class="titulo2">Datos del paciente</h1>
-    <form action="" class="datos1">
-      <label for="nombre-paciente" class="nombre">
+          <h1 class="titulo2">Datos del paciente</h1>
+          <form action="" class="datos1">
+              <label for="nombrePaciente" class="nombre">
+                  <span>Nombre del paciente:</span>
+                  <input type="text" id="nombrePaciente" placeholder="Juan Carlos Rodríguez" required>
+              </label>
       <span> Nombre del paciente: </span>
       <input type="text" id="nombrePaciente" placeholder="Juan Carlos Rodríguez">
     </label>
@@ -72,12 +75,12 @@
       <span> Documento de identidad:</span>
       <input type="number" id="documentoIdentidad" placeholder="90954346">
     </label>
-    <label for="edad" class="edad">
+    <label for="edad" class="edad" required>
       <span>Edad:</span >
       <input type="text" id="edad"  placeholder="43 años">
     </label> 
       
-     <label for="sintoma" class="sintoma1">
+     <label for="sintoma" class="sintoma1" required>
       <span>Síntoma principal:</span>
       <select name="síntomas" id="sintomaPrincipal" class="v-sintomas">
      <option value="1">Fiebre</option>
@@ -102,7 +105,7 @@
 
     
       <section class="section2">
-        <h1 class="otros">Otros sìntomas</h1>
+        <h2 class="otros">Otros sìntomas</h2>
       <form action="" class="sintomas-otros">
      <label for="Fiebre1" class="otros-sintomas">
       <span>Fiebre</span>
