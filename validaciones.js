@@ -1,44 +1,51 @@
-// validaciones.js
+// Archivo: validaciones.js
+// Este archivo contiene funciones reutilizables para validar formularios y manejar errores.
 
 /**
- * Verifica si un campo está vacío.
- * @param {string} valor - Valor del campo.
+ * Valida si un campo está vacío.
+ * @param {string} valor - El valor del campo.
  * @returns {boolean} - True si está vacío, false en caso contrario.
  */
-function estaVacio(valor) {
-    return !valor || valor.trim() === '';
+function validarCampoVacio(valor) {
+    return !valor.trim();
 }
 
 /**
- * Verifica si un valor es un número válido.
- * @param {string} valor - Valor del campo.
- * @returns {boolean} - True si es un número, false en caso contrario.
+ * Valida si un valor es numérico.
+ * @param {string} valor - El valor a validar.
+ * @returns {boolean} - True si es numérico, false en caso contrario.
  */
-function esNumeroValido(valor) {
-    return !isNaN(valor) && valor > 0;
+function validarNumerico(valor) {
+    return !isNaN(valor);
 }
 
 /**
- * Realiza las validaciones de los campos del formulario.
- * @param {object} campos - Objeto con los valores de los campos.
+ * Valida un conjunto de campos basado en reglas específicas.
+ * @param {Object} campos - Objeto con los valores de los campos a validar.
  * @returns {string|null} - Mensaje de error si hay un problema, null si todo es válido.
  */
 function validarCampos(campos) {
-    if (estaVacio(campos.nombrePaciente)) {
-        return 'El nombre del paciente no puede estar vacío.';
+    for (let campo in campos) {
+        if (validarCampoVacio(campos[campo])) {
+            return `Por favor, ingrese un valor válido para ${campo.replace(/([A-Z])/g, ' $1').toLowerCase()}.`;
+        }
+        if ((campo === 'documentoIdentidad' || campo === 'edad') && !validarNumerico(campos[campo])) {
+            return `El campo ${campo.replace(/([A-Z])/g, ' $1').toLowerCase()} debe ser un número.`;
+        }
     }
-    if (estaVacio(campos.documentoIdentidad) || !esNumeroValido(campos.documentoIdentidad)) {
-        return 'El documento de identidad debe ser un número válido.';
-    }
-    if (estaVacio(campos.edad) || !esNumeroValido(campos.edad)) {
-        return 'La edad debe ser un número válido mayor a 0.';
-    }
-    if (estaVacio(campos.sintomaPrincipal)) {
-        return 'El síntoma principal no puede estar vacío.';
-    }
-    if (estaVacio(campos.antiguedadSintomas)) {
-        return 'La antigüedad de los síntomas no puede estar vacía.';
-    }
-    return null; // Todos los campos son válidos
+    return null;
 }
 
+/**
+ * Verifica si localStorage tiene valores válidos.
+ * @param {Array<string>} keys - Array con las claves que se deben verificar.
+ * @returns {boolean} - True si todos los valores existen y son válidos, false en caso contrario.
+ */
+function validarLocalStorage(keys) {
+    for (const key of keys) {
+        if (!localStorage.getItem(key)) {
+            return false;
+        }
+    }
+    return true;
+}
