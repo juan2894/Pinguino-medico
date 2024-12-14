@@ -25,6 +25,17 @@
 <script src="validaciones.js"></script>
 <script src="segundo.js"></script>
 <script src="tercero.js"></script>
+       <script>
+        // Agregar funcionalidad al botón "Historia clínica"
+        document.getElementById('historiaClinicaBtn').addEventListener('click', () => {
+            // Redirigir o mostrar una alerta
+            if (localStorage.getItem('nombrePaciente')) {
+                window.location.href = 'tercero.html';
+            } else {
+                alert('No hay información de historia clínica almacenada.');
+            }
+        });
+    </script>
 
 </body>
 </html>
