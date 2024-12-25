@@ -14,18 +14,18 @@
         </figure>
     </header>
     <main>
-        <section class="texto1">
+        <section class="texto1" id="main-title">
             <h1>Tus historias clínicas en tiempo record</h1>
         </section>
         <section class="botones">
-            <a href="segundo.html" class="registro btn">Nuevo registro</a>
-            <button type="button" class="historia btn">Historia clínica</button>
+            <a href="segundo.html" class="registro btn" aria-label="Nuevo Registro">Nuevo registro</a>
+            <button type="button" class="historia btn" aria-label="Historia Clinica" id="historiaClinicaBtn">Historia clínica</button>
         </section>
     </main>
-<script src="validaciones.js"></script>
-<script src="segundo.js"></script>
-<script src="tercero.js"></script>
-       <script>
+    <script src="validaciones.js"></script>
+    <script src="segundo.js"></script>
+    <script src="tercero.js"></script>
+    <script>
         // Agregar funcionalidad al botón "Historia clínica"
         document.getElementById('historiaClinicaBtn').addEventListener('click', () => {
             // Redirigir o mostrar una alerta
@@ -36,6 +36,5 @@
             }
         });
     </script>
-
 </body>
 </html>
