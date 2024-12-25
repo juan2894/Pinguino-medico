@@ -21,7 +21,7 @@
 <body>
   <header>
     <figure>
-      <a href="index.html">
+     <a href="index.html" aria-label="Volver a la página principal">
               <img src="./imagenes/arrow-left.png" class="flecha" alt="Regresar">
       </a>
     </figure>
@@ -37,20 +37,20 @@
              <form id="formDatosPaciente" class="datos1" onsubmit="return guardarDatosPaciente()">
             <label for="nombrePaciente" class="nombre">
                 <span>Nombre del paciente:</span>
-<input type="text" id="nombrePaciente" name="nombrePaciente" placeholder="Juan Carlos Rodríguez" required>
+            <input type="text" id="nombrePaciente" name="nombrePaciente" placeholder="Juan Carlos Rodríguez" required aria-label="Nombre del paciente">
             </label>
     <label for="documento-identidad"  class="identidad">
       <span> Documento de identidad:</span>
-      <input type="number" id="documentoIdentidad" placeholder="90954346">
+      <input type="number" id="documentoIdentidad" placeholder="90954346" aria-label="Documento de identidad">
     </label>
     <label for="edad" class="edad" required>
       <span>Edad:</span >
-      <input type="text" id="edad"  placeholder="43 años">
+      <input type="text" id="edad"  placeholder="43 años"  aria-label="Edad del paciente">
     </label> 
       
      <label for="sintoma" class="sintoma1" required>
       <span>Síntoma principal:</span>
-      <select name="síntomas" id="sintomaPrincipal" class="v-sintomas">
+      <select name="síntomas" id="sintomaPrincipal" class="v-sintomas"  aria-label="Síntoma principal">
      <option value="1">Fiebre</option>
       <option value="2">Dolor abdominal</option>
      <option value="3">Cefalea</option>
@@ -66,7 +66,7 @@
     </label>
     <label for="antiguedad" class="antiguedad">
       <span>Antigüedad de sintomatología:</span>
-      <input type="text" id="antiguedadSintomas"  placeholder="una semana">
+      <input type="text" id="antiguedadSintomas"  placeholder="una semana"  aria-label="Antigüedad de sintomatología">
     </label>
     </form>
     </section>
@@ -77,7 +77,7 @@
       <form action="" class="sintomas-otros">
      <label for="Fiebre1" class="otros-sintomas">
       <span>Fiebre</span>
-      <input type="checkbox">
+      <input type="checkbox" aria-label="Fiebre">
      </label>
       <label for="Dolor-abdominal1">
       <span>Dolor abdominal</span>
