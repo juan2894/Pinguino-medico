@@ -16,47 +16,73 @@
  </header>
   
  <main>
-  <section class>
-    <div>
-    <p>Enfermedad actual</p>
-   <figure class="icono1">
-        <img src="./imagenes/copiar.png" class="copiar1"> </figure>
-    </div>
-  <input type="text" class="enfermedadac" value="">
-  </section>
-
-  <section class="antec">
-    <div>
-  <p>Antecedentes familiares</p>
-    <figure class="icono2">
-        <img src="./imagenes/copiar.png" class="copiar2"> </figure>
-    </div>
-    <input type="text" class="antecedentesfam" value="">
-  </section>
-
+    <!--
+      NOTA PARA EL APRENDIZ:
+      Cada sección de resultados contiene un título, un botón para copiar y un <textarea>.
+      - Se ha asignado un `id` único a cada <textarea> y a cada botón de copiar.
+        Esto es fundamental para que JavaScript sepa qué texto mostrar en qué área y
+        qué texto copiar cuando se hace clic en un botón específico.
+      - Se usan <textarea> en lugar de <input type="text"> porque son más adecuados para
+        mostrar texto largo y de múltiples líneas, como las notas clínicas.
+      - El atributo `readonly` se añade para evitar que el usuario edite el texto generado.
+    -->
     <section>
       <div>
-    <p>Exámen fisico</p>
-      <figure class="icono3">
-        <img src="./imagenes/copiar.png" class="copiar3"> </figure>
+        <p>Enfermedad actual</p>
+        <!-- ERROR CORREGIDO: Se añade un id al botón/imagen para poder seleccionarlo en JS -->
+        <figure class="icono1" id="copiarEnfermedadActual" title="Copiar texto">
+          <img src="./imagenes/copiar.png" class="copiar1">
+        </figure>
       </div>
-    <input type="text" class="examenfis" value="">
-    <figure>
+      <!-- ERROR CORREGIDO: Se cambia input por textarea y se le da un id único -->
+      <textarea id="enfermedadActualOutput" class="enfermedadac" rows="5" readonly></textarea>
+    </section>
+
+    <section class="antec">
+      <div>
+        <p>Antecedentes y Revisión por Sistemas</p>
+        <figure class="icono2" id="copiarAntecedentes" title="Copiar texto">
+          <img src="./imagenes/copiar.png" class="copiar2">
+        </figure>
+      </div>
+      <textarea id="antecedentesOutput" class="antecedentesfam" rows="5" readonly></textarea>
     </section>
 
     <section>
       <div>
-      <p>Plan</p>
-    <figure class="icono4">
-        <img src="./imagenes/copiar.png" class="copiar4"> </figure>
+        <p>Examen Físico</p>
+        <figure class="icono3" id="copiarExamenFisico" title="Copiar texto">
+          <img src="./imagenes/copiar.png" class="copiar3">
+        </figure>
       </div>
-     <input type="text" class="plan" value="">
+      <textarea id="examenFisicoOutput" class="examenfis" rows="5" readonly></textarea>
+      <!-- ERROR CORREGIDO: Se eliminó una etiqueta <figure> vacía y mal cerrada que había aquí -->
     </section>
 
-      <section class="finali">
-    <button onclick="window.location.href='index.html'"class="final">Finalizar</button>
-      </section>
+    <section>
+      <div>
+        <p>Plan</p>
+        <figure class="icono4" id="copiarPlan" title="Copiar texto">
+          <img src="./imagenes/copiar.png" class="copiar4">
+        </figure>
+      </div>
+      <textarea id="planOutput" class="plan" rows="5" readonly></textarea>
+    </section>
+
+    <section class="finali">
+      <!--
+        ERROR CORREGIDO: Se eliminó el `onclick` en línea.
+        El comportamiento del botón se manejará en `tercero.js`.
+        Se le ha dado un `id` para poder seleccionarlo fácilmente.
+      -->
+      <button id="finalizarBtn" class="final">Finalizar y Limpiar</button>
+    </section>
   </main>
-  <script src="script.js"></script>
+
+  <!--
+    ERROR CORREGIDO: Se cambió la referencia del script de `script.js` (que no existe) a `tercero.js`.
+    El atributo `defer` asegura que el script se ejecute después de que la página se haya cargado.
+  -->
+  <script src="tercero.js" defer></script>
 </body>
 </html>
